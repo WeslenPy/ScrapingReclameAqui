@@ -16,7 +16,7 @@ class ThreadCRUD(Thread):
 
         print(f'Reclamação {self.data["id"]} inserida, company {self.data["Company"]}!\n')
 
-        #Insere a nova reclamção no Banco de Dados SQL
+        #Insere a nova reclamação no Banco de Dados SQL
         CRUD.Insert("INSERT OR IGNORE INTO Complaint(id,Title,Company,Local,Date,Complaint,Status) VALUES (?,?,?,?,?,?,?)",
                     insert=(self.data['id'],self.data['Title'],self.data['Company'],self.data['Local'],self.data['Date'],self.data['Complaint'],self.data['Status'],))
 
